@@ -1,0 +1,70 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #0b1522;
+}
+
+#btn_heart{
+	border-style: none;
+	height: 80px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	padding: 5px;
+	width: 80px;
+	background: #f20044;
+	box-shadow: -10px 10px 90px #f20044;
+	transform: rotate(45deg);
+}
+
+
+
+.heart{
+	height: 140px;
+	width: 140px;
+	background: #E63946;
+	position: relative;
+	transform: rotate(-45deg);
+	box-shadow: -10px 10px 90px #f20044;
+}
+
+.heart:hover{
+	animation: heart 0.6s linear infinite;
+}
+
+
+@keyframes heart{
+	0%{
+		transform: rotate(-45deg) scale(1.07);
+	}
+	80%{
+		transform: rotate(-45deg) scale(1.0);
+	}
+	100%{
+		transform: rotate(-45deg) scale(1.08);
+	}
+}
+
+.heart:before{
+	content: '';
+	position: absolute;
+	height: 140px;
+	width: 140px;
+	background: #f20044;
+	top:-50%;
+	border-radius: 100px;
+	box-shadow: -10px -10px 90px #f20044;
+}
+.heart:after{
+	content: '';
+	position: absolute;
+	height: 140px;
+	width: 140px;
+	background: #f20044;
+	right:-50%;
+	border-radius: 100px;
+	box-shadow: 10px 10px 90px #f20044;
+}
